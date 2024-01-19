@@ -1,0 +1,43 @@
+package com.game;
+class LibraryManagment {
+	String[] books;
+	int No_ofBooks=0;
+	LibraryManagment(){
+		this.books=new String[100];
+		this.No_ofBooks=0;
+		
+	}
+	
+public void addBook(String Books)
+{
+	Books=this.books[No_ofBooks];
+	No_ofBooks++;
+	System.out.println(Books+"is Add Succesfully in Record");
+	
+}
+public void issueBook()
+{
+	
+}
+public void returnBook()
+{
+	
+}
+public void showAvilableBook()
+{
+System.out.println("Avilable Books are");	
+for(String book:books) {
+	
+	System.out.println("# "+Books);
+}
+}
+}
+
+public class Library{
+	public static void main(String[] args) {
+		LibraryManagment LM=new LibraryManagment();
+		LM.addBook("Automic Habbit");
+		LM.showAvilableBook();
+	}
+
+}

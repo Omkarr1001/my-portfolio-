@@ -1,0 +1,68 @@
+package com.game;
+import java.util.Random;
+import java.util.Scanner;
+
+class Logic
+{
+int userInput;
+int computerInput;
+int noOfguess=0;
+   
+  int noOfguess()
+  {
+	  return noOfguess;
+  }
+  
+public int getNoOfguess() {
+	return noOfguess;
+}
+public void setNoOfguess(int noOfguess) {
+	this.noOfguess = noOfguess;
+}
+ Logic()
+ {
+	 Random ra=new  Random();
+	 this.computerInput=ra.nextInt(100);
+ }
+ void takeUserInput()
+ {
+	 Scanner sc= new Scanner(System.in);
+	 System.out.println("Please Enter Your No ");
+	 userInput=sc.nextInt();
+	 
+	 
+ }
+ boolean isCorrectNumber(){
+	 if(userInput==computerInput)
+	 {
+		 System.out.format("You Won the game, Your Guessed in %d\n attempts",userInput,noOfguess);
+		 return true;
+	 }
+	 else if(userInput<computerInput)
+	 {
+		 System.out.println("your no is low...");
+	 }
+	 else if (userInput>computerInput)
+	 {
+		 System.out.println("Your no is high...");
+	 }
+	 return false;
+ }
+ {
+	
+}
+
+}
+
+public class No_Guessing {
+public static void main(String[] args) {
+	boolean b=false;
+	Logic l=new Logic();
+	while(b)
+	{
+		l.takeUserInput();
+		 b=l.isCorrectNumber();
+		System.out.println(b);
+	}
+}
+}

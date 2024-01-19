@@ -1,0 +1,61 @@
+package Revision;
+class Rectangle
+
+{
+private int l;
+private int b;
+private int h;
+
+public void setl(int l)
+{
+this.l= l;
+
+}
+
+public int getl()
+{
+return l;
+}
+public void setb(int b)
+{
+this.b= b;
+
+}
+
+public int getb()
+{
+return b;
+}
+public void seth(int h)
+{
+this.h= h;
+
+}
+
+public int geth()
+{
+return h;
+}
+
+public void volume()
+{
+int v;
+ v=l*b*h;
+System.out.println(v);
+}
+}
+	
+
+
+
+
+public class Timepass {
+	public  static void  main(String [] arr)
+	{
+	Rectangle r=new Rectangle();
+	r.setl(10);
+	r.setb(22);
+	r.seth(12);
+	r.volume();
+	}
+	}

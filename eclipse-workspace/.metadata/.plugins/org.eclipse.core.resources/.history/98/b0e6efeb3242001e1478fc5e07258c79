@@ -1,0 +1,91 @@
+package Demo1;
+import java.util.ArrayList;
+public class main2 {
+public static void main(String[] args) {
+	
+	Product p1=new Product();
+	Product p2=new Product();
+	Product p3=new Product();
+	Product p4=new Product();
+	Product p5=new Product();
+	
+	p1.id=1; p1.name="mobile"; p1.price=30000f;
+	p2.id=2; p2.name="Laptop"; p2.price=70000f;
+	p3.id=3; p3.name="Tablet"; p3.price=25000f;
+	p4.id=4; p4.name="TV"; p4.price=80000f;
+	p5.id=5; p5.name="Dekstop"; p5.price=10000f;
+	
+	
+	ArrayList <Product> a=new ArrayList <Product>();
+	a.add(p1);
+	a.add(p2);
+	a.add(p3);
+	a.add(p4);
+	a.add(p5);
+	a.add(p1);
+	
+	for(int i=0;i<a.size();i++)
+	{
+		Product t=a.get(i);
+	System.out.println(t.id+" "+t.name+" "+t.price);
+	
+	}
+	System.out.println("-----------------------------------------------------------------");
+	System.out.println("Most Expensive value ");
+	
+	Product max=a.get(0);
+	
+	for(int i=0;i<a.size();i++)
+	{
+		Product t=a.get(i);
+		if(t.price>max.price)
+			
+		{
+			
+	System.out.println(t.id+" "+t.name+" "+t.price);
+		}
+	}
+	System.out.println("-----------------------------------------------------------------");
+	System.out.println("Most Cheapest item");
+	System.out.println("-----------------------------------------------------------------");
+	
+Product min=a.get(0);
+	
+	for(int i=0;i<a.size();i++)
+	{
+		Product t=a.get(i);
+		if(t.price<min.price)
+		{
+	System.out.println(t.id+" "+t.name+" "+t.price);
+		}
+	}
+	
+	
+	
+	
+	System.out.println("-----------------------------------------------------------------");
+	System.out.println("10% Discount on  All product");
+	System.out.println("-----------------------------------------------------------------");
+	float r=0;
+	for(int i=0;i<a.size();i++)
+	{
+		Product t1=a.get(i);
+		r=t1.price%10;
+		
+		
+		
+	System.out.println(t1.id+" "+t1.name+" "+t1.price);
+	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
+}
+

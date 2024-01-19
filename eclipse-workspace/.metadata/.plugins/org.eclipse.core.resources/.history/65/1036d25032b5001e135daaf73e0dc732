@@ -1,0 +1,92 @@
+package com.practice;
+
+import java.util.Scanner;
+
+abstract class pet
+{
+	
+	abstract void category();
+	
+	
+	abstract void avilableColor();
+	abstract void age();
+	abstract void Detail();
+	
+}
+class info extends pet
+{ 
+	 int userInput;
+	 String ct;
+	 String Color;
+	 Scanner sc=new Scanner(System.in);
+	 info ()
+	 { 
+	 System.out.println("Selec Your Choice ");
+	 System.out.println("\n1:Cat");
+	 System.out.println("\n2:Dog");
+		
+		
+		 if(userInput==1)
+		 {
+			 ct="Cat";
+		 }else
+		 {
+			 ct="Dog";
+		 }
+		 
+		}
+	 void avilableColor()
+	 {
+		
+		 System.out.println("Select Your Color");
+		 System.out.println("\n1:1lack");
+		 System.out.println("n\2:White");
+		 System.out.println("\n3:Brown");
+		 System.out.println("\n4:Black And White");
+		 if(userInput==1){
+			 Color="Black";
+			 
+		 }
+		 if(userInput==2){
+			 Color="White";
+			 
+		 }
+		 if(userInput==3){
+			 Color="Brown";
+			 
+		 }
+		 if(userInput==4){
+			 Color="Black & White";
+			 
+		 }
+		 
+		 
+		 
+	 }
+	@Override
+	void age() {
+		
+		System.out.println("Age is 24");
+	}
+	@Override
+	void Detail() {
+		System.out.println("You Selected pet is"+this.ct);
+		System.out.println(this.ct+" color  is"+this.Color);
+		System.out.println("This"+ this.ct +"age is 24");
+		System.out.println(" Your Adoption is Succesful");
+		
+	}
+	 }
+	
+	
+
+public class Customer extends info {
+public static void main(String[] args) {
+	info i=new info();
+		i.category();
+		i.avilableColor();
+		i.age();
+		i.Detail();
+		
+	}
+}

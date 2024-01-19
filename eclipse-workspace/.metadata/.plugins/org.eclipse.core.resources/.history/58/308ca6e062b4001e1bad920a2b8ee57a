@@ -1,0 +1,32 @@
+package com.game;
+class LibraryManagment {
+	String[] books;
+	int No_OfBooks=0;
+	LibraryManagment(){
+		this.books=new String[100];
+		this.No_ofBooks=0;
+		
+	}
+	
+public void addBook(String Books)
+{
+	this.books[no]=Books;
+	
+}
+public void issueBook()
+{
+	
+}
+public void returnBook()
+{
+	
+}
+public void showAvilableBook()
+{
+	
+}
+}
+
+public class Library{
+
+}

@@ -1,0 +1,39 @@
+package com.overide;
+ class A
+{
+	int a;
+	public void m1(){
+	System.out.println("This is method of m1 in class A");	
+		
+	}
+	public void m2()
+	{
+		System.out.println("This is Method of class A ");
+	}
+}
+
+class B extends A
+{
+	@Override
+	public void m1()
+	{
+	System.out.println("this method of class B");	
+	}
+	public  void m2()
+	{
+		System.out.println("this is method of class B");
+	}
+}
+
+public class Overid {
+	public static void main(String[] args) {
+		B b=new B();
+		A a=new B();
+		b.m2();
+		a.m2();
+		
+	}
+	
+	
+
+}

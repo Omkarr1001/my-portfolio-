@@ -1,0 +1,26 @@
+package opps;
+
+public class Oops {
+
+	public static void main(String[] args) {
+	
+		
+		Pen p1 = new Pen();
+		
+		p1.color= "red";
+		p1.type= "ballpen";
+		
+		p1.write();
+		
+		
+		Pen p2= new Pen();
+		p2.color="black";
+		p2.type="gel";
+		
+		p1.read();
+	
+	}
+	
+		
+
+}
