@@ -1,0 +1,18 @@
+# Node modules
+node_modules/
+frontend/node_modules/
+
+# Java build output
+target/
+*.class
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# Environment
+.env

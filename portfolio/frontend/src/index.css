@@ -1,0 +1,242 @@
+/* You can add your custom global styles here if needed */
+
+:root {
+  --primary: #9B59B6; /* Deep Purple */
+  --secondary: #3498DB; /* Electric Blue */
+  --dark: #1A1A2E; /* Dark Blue-Purple */
+  --darker: #0F0F1A; /* Even darker */
+  --light: #E0E0E0; /* Off-white for text */
+  --accent: #E74C3C; /* Vibrant Red for accents/hover */
+  --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+
+  /* Light theme variables (updated to new theme colors for consistency if theme switching is used) */
+  --light-primary: #3498DB;
+  --light-secondary: #2ECC71;
+  --light-bg: #F8F9FA;
+  --light-text: #343A40;
+  --light-card-bg: #FFFFFF;
+  --light-card-border: rgba(52, 152, 219, 0.3);
+  --light-accent: #2980B9;
+}
+
+body {
+  margin: 0;
+  font-family: 'Share Tech Mono', monospace;
+  background-color: var(--dark);
+  color: var(--light);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.light-theme {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+body.light-theme .ai-border {
+  border-color: var(--light-primary);
+  box-shadow: 0 0 15px var(--light-primary);
+}
+
+body.light-theme .ai-border::before {
+  background: linear-gradient(135deg, var(--light-primary), var(--light-secondary));
+}
+
+body.light-theme .ai-text {
+  background: linear-gradient(135deg, var(--light-primary), var(--light-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+body.light-theme .ai-card {
+  background: var(--light-card-bg);
+  backdrop-filter: blur(0px);
+  border: 1px solid var(--light-card-border);
+}
+
+body.light-theme .ai-card:hover {
+  box-shadow: 0 0 20px var(--light-primary);
+}
+
+body.light-theme .ai-button {
+  border-color: var(--light-primary);
+  color: var(--light-primary);
+}
+
+body.light-theme .ai-button::before {
+  background: linear-gradient(135deg, var(--light-primary), var(--light-secondary));
+}
+
+body.light-theme .ai-button:hover {
+  color: var(--light);
+}
+
+body.light-theme .ai-input {
+  background: var(--light-card-bg);
+  border-color: var(--light-card-border);
+  color: var(--light-text);
+}
+
+body.light-theme .ai-input:focus {
+  box-shadow: 0 0 15px var(--light-primary);
+  border-color: var(--light-secondary);
+}
+
+body.light-theme .ai-skill-badge {
+  background: rgba(0, 123, 255, 0.1);
+  border-color: var(--light-primary);
+  color: var(--light-primary);
+}
+
+body.light-theme .ai-skill-badge:hover {
+  background: var(--light-primary);
+  color: var(--light);
+}
+
+body.light-theme .ai-project-card::after {
+  background: linear-gradient(45deg, transparent, rgba(0, 123, 255, 0.1));
+}
+
+body.light-theme .ai-project-card:hover::after {
+  background: linear-gradient(45deg, transparent, rgba(0, 123, 255, 0.2));
+}
+
+body.light-theme .ai-certification-card {
+  border-left-color: var(--light-primary);
+}
+
+body.light-theme .ai-loading {
+  border-color: var(--light-primary);
+  border-top-color: transparent;
+}
+
+body.light-theme ::-webkit-scrollbar-thumb {
+  background: var(--light-primary);
+}
+
+body.light-theme ::-webkit-scrollbar-thumb:hover {
+  background: var(--light-accent);
+}
+
+/* Containers and basic layout */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* AI Theme Elements */
+.ai-border {
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 15px var(--primary);
+  position: relative;
+}
+
+.ai-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: var(--gradient);
+  z-index: -1;
+  animation: borderGlow 2s linear infinite;
+}
+
+.ai-text {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s ease;
+}
+
+.ai-text:hover {
+  text-shadow: 0 0 10px var(--primary);
+}
+
+.ai-card {
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 0, 51, 0.3);
+  transition: all 0.3s ease;
+}
+
+.ai-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px var(--primary);
+}
+
+/* Animations */
+@keyframes borderGlow {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+@keyframes textGlow {
+  0% { text-shadow: 0 0 10px var(--primary); }
+  50% { text-shadow: 0 0 20px var(--primary), 0 0 30px var(--secondary); }
+  100% { text-shadow: 0 0 10px var(--primary); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Particles Container */
+/* Removed #particles-js rules */
+
+/* Typing Animation */
+.typing-text {
+  border-right: 2px solid var(--primary);
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--darker);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Section Transitions */
+.section-transition {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.section-transition.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ai-border::before {
+    display: none;
+  }
+  
+  .ai-card {
+    margin: 10px 0;
+  }
+} 
